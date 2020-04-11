@@ -1,5 +1,18 @@
 #include<stdio.h>
+
+void test(int *b)
+{
+    int a;
+    a=(int )&b;
+    printf("%d\n",a);
+}
 int main()
 {
-    printf("hallo world!/n欢迎来到我的世界\n");
+    int *b;
+    int c=1,d=0;
+    b=&c;
+    test(b);
+    d=(int)&b;
+    printf("%d\n",d);
+    return 0;
 }
